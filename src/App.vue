@@ -1,49 +1,35 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar color="deep-purple" dark>
-        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-
+      <v-app-bar color="light-green" dark>
         <v-toolbar-title>かーくん勉強ブログ</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn
+          href="https://twitter.com/kakun_triplei?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=http%3A%2F%2Flocalhost%3A8080%2F"
+          class="ma-2"
+          color="blue"
+          ><v-icon color="white">mdi-twitter</v-icon>カーくん</v-btn
+        >
       </v-app-bar>
     </div>
-    <v-navigation-drawer v-model="drawer" absolute temporary>
-      <v-list nav dense>
-        <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Twitter</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
     <v-content>
-      <HelloWorld />
+      <Twitter />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Twitter from "./components/Twitter";
 
 export default {
   name: "App",
 
   components: {
-    HelloWorld
+    Twitter,
   },
 
   data: () => ({
-    drawer: false
-  })
+    drawer: false,
+  }),
 };
 </script>
