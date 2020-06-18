@@ -13,6 +13,7 @@
       </v-app-bar>
     </div>
     <v-content>
+      <Blog />
       <Twitter />
     </v-content>
   </v-app>
@@ -20,12 +21,14 @@
 
 <script>
 import Twitter from "./components/Twitter";
+import Blog from "./components/Blog";
 
 export default {
   name: "App",
 
   components: {
     Twitter,
+    Blog,
   },
 
   data: () => ({
